@@ -6,6 +6,11 @@ class Game
     @p2 = Player.new(player2)
     @current_player = @p1
 
+    start_game
+    
+  end
+
+  def start_game
     while (!@p1.is_dead? && !@p2.is_dead?)
       new_turn
       if validate_game_over
